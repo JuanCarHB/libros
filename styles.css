@@ -1,0 +1,170 @@
+/* Estilos generales */
+body {
+    font-family: 'Caudex', serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #3b5998;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Estilos para el contenedor de los posts */
+#posts-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    position: relative;
+}
+
+#posts {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+}
+
+.post {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    cursor: pointer;
+    padding: 20px;
+    flex-shrink: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Centrado horizontal */
+    position: relative;
+    text-align: center; /* Centrar texto */
+}
+
+.post:hover {
+    transform: scale(1.05);
+}
+
+.post.selected {
+    background-color: #e9f0ff; /* Cambiar color cuando esté seleccionado */
+}
+
+.post img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px; /* Definimos una altura fija para las imágenes */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin deformarse */
+    margin-bottom: 15px;
+}
+
+.post-content {
+    height: auto;
+    flex-grow: 1;
+}
+
+.post-content h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.post-footer {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+/* Estilo para la frase célebre */
+.quote {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #ff6347;
+}
+
+/* Estilo para el autor */
+.author {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: #3b5998;
+}
+
+/* Estilos para las flechas */
+.arrow {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+/* Estilos del pie de página */
+footer {
+    background-color: #3b5998;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;  /* Asegura que el pie de página se quede en el fondo */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.footer-content a {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
